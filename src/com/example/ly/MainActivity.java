@@ -1,7 +1,7 @@
 package com.example.ly;
 
 import jp.co.cyberagent.android.gpuimage.GPUImage;
-import jp.co.cyberagent.android.gpuimage.GPUImageToonFilter;
+import jp.co.cyberagent.android.gpuimage.GPUImageEmbossFilter;
 import android.app.Activity;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
 		iv = (ImageView)findViewById(R.id.doroid);
 		GPUImage gpuimage = new GPUImage(this);
 		gpuimage.setImage(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher));
-		gpuimage.setFilter(new GPUImageToonFilter());
+		gpuimage.setFilter(new GPUImageEmbossFilter());
 		iv.setImageBitmap(gpuimage.getBitmapWithFilterApplied());
 	}
 
